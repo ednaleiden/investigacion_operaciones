@@ -27,19 +27,19 @@ class MatrixApp:
         self.submit_button.grid(row=3, column=0, columnspan=5, pady=10)
 
         # Botón para calcular el criterio (suma ponderada)
-        self.criteria_button = tk.Button(root, text="Criterio", command=self.calculate_criteria, state="disabled")
+        self.criteria_button = tk.Button(root, text="Criterio valor esperado", command=self.calculate_criteria, state="disabled")
         self.criteria_button.grid(row=4, column=0, columnspan=5, pady=10)
 
         # Botón para calcular la máxima posibilidad
-        self.max_button = tk.Button(root, text="Máxima Posibilidad", command=self.calculate_max_possibility, state="disabled")
+        self.max_button = tk.Button(root, text="C. Máxima Posibilidad", command=self.calculate_max_possibility, state="disabled")
         self.max_button.grid(row=5, column=0, columnspan=5, pady=10)
 
         # Botón para calcular las lamentaciones mínimas
-        self.lament_button = tk.Button(root, text="Lamentaciones Mínimas", command=self.calculate_lamentaciones_minimas, state="disabled")
+        self.lament_button = tk.Button(root, text="C. Lamentaciones Mínimas", command=self.calculate_lamentaciones_minimas, state="disabled")
         self.lament_button.grid(row=6, column=0, columnspan=5, pady=10)
 
         # Botón para calcular la mínima varianza
-        self.varianza_button = tk.Button(root, text="Mínima Varianza", command=self.calculate_minima_varianza, state="disabled")
+        self.varianza_button = tk.Button(root, text="C. Mínima Varianza", command=self.calculate_minima_varianza, state="disabled")
         self.varianza_button.grid(row=7, column=0, columnspan=5, pady=10)
 
         # Botón para el cuadro resumen
@@ -343,7 +343,7 @@ class MatrixApp:
 
         # Ventana para mostrar los resultados
         result_window = tk.Toplevel(self.root)
-        result_window.title("Lamentaciones Mínimas")
+        result_window.title("C. Lamentaciones Mínimas esperadas")
 
         style = ttk.Style()
         style.configure("Treeview", rowheight=30, font=("Arial", 12),
@@ -456,7 +456,7 @@ class MatrixApp:
 
         # Crear ventana para mostrar ambas tablas
         result_window = tk.Toplevel(self.root)
-        result_window.title("Mínima Varianza")
+        result_window.title("C. Mínima Varianza")
 
         # --- Tabla 1: Tabla de Criterio ---
         frame1 = tk.Frame(result_window)
